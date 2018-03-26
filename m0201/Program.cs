@@ -3,9 +3,9 @@ using m0201.Exceptions;
 
 namespace m0201
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             ConsoleKeyInfo answer;
 
@@ -16,7 +16,7 @@ namespace m0201
 
                 var trimmer = new InputTrimmer();
 
-                string currLine = Console.ReadLine();
+                var currLine = Console.ReadLine();
 
                 while (currLine?.Trim().ToLower() != "result")
                 {
