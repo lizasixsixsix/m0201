@@ -11,18 +11,16 @@ namespace m0201
 
             do
             {
-                string currLine = "";
-
                 Console.WriteLine("Type some lines of text.\n\n" +
                                   "Type \"result\" to see the result.\n");
 
                 var trimmer = new InputTrimmer();
 
-                currLine = Console.ReadLine();
+                string currLine = Console.ReadLine();
 
-                while (currLine.Trim().ToLower() != "result")
+                while (currLine?.Trim().ToLower() != "result")
                 {
-                    if (currLine.Length == 0)
+                    if (currLine?.Length == 0)
                     {
                         throw new UserInputException("Line cannot be empty.");
                     }
